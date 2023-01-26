@@ -13,6 +13,8 @@ public class groupanagrams {
 
 
     }*/
+    
+    //not 100% completed, but got the gist down 
 
     public static void main(String[] args) {
         String[] strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
