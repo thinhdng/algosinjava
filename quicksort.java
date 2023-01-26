@@ -43,7 +43,7 @@ public class quicksort {
     }
 
     //quicksort routine
-    public static void quicksort(int[] a, int start, int end){
+    public static void quicksortt(int[] a, int start, int end){
         //base condition
         if(start >= end){
             return;
@@ -53,16 +53,16 @@ public class quicksort {
         int pivot = partition(a, start, end);
 
         //recur on subarray containing elements less than the pivot
-        quicksort(a, start, pivot-1);
+        quicksortt(a, start, pivot-1);
 
         //recur on subarray containing elements bigger than the pivot
-        quicksort(a, pivot + 1, end);
+        quicksortt(a, pivot + 1, end);
     }
 
     //implementing the sort
     public static void main(String[] args){
         int[] a = {9, -3, 5, 2, 6, 8, -6, 1, 3};
-        quicksort(a, 0, a.length-1);
+        quicksortt(a, 0, a.length-1);
         //print the sorted array
         System.out.println(Arrays.toString(a));
     }

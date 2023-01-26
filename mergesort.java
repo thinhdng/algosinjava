@@ -50,7 +50,7 @@ public class mergesort {
 
     //sort array 'arr[low...high]' using auxiliary array 'aux'
     //lows and highs refer to the actual content 
-    public static void mergesort(int[] arr, int[] aux, int low, int high){
+    public static void mergesortt(int[] arr, int[] aux, int low, int high){
         //base case
         if(high <= low){
             return;
@@ -62,8 +62,8 @@ public class mergesort {
         //recursively split subarrays into 2 halves until subarrays' size <= 1,
         //then merge them and return up the call chain
 
-        mergesort(arr, aux, low, mid); //split and merge the lower half
-        mergesort(arr , aux, mid + 1, high); //split and merge the higher half
+        mergesortt(arr, aux, low, mid); //split and merge the lower half
+        mergesortt(arr , aux, mid + 1, high); //split and merge the higher half
         merge(arr, aux, low, mid, high); //merge the 2 halves runs
     }
 
@@ -86,7 +86,7 @@ public class mergesort {
         int[] aux = Arrays.copyOf(arr, arr.length);
 
         //sort array 'arr' using the aux array 'aux'
-        mergesort(arr, aux, 0, arr.length-1);
+        mergesortt(arr, aux, 0, arr.length-1);
 
         if(isSorted(arr)){
             System.out.println(Arrays.toString(arr));
